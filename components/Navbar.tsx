@@ -31,13 +31,14 @@ const Navbar = () => {
 					<span className="logo-text">Bookified</span>
 				</Link>
 				<nav className="w-fit flex gap-7.5 items-center">
-					{navItems.map(({label, href}) => {
+					{navItems.map(({ label, href }) => {
 						const isActive = pathName === href || (href != "/" && pathName.startsWith(href));
 
-                        return (
-                            <Link
-                                key={label}
-                                href={href} className={ cn('nav-link-base', isActive ? 'nav-link-active' : 'text-black hover:opacity-70')}>
+						return (
+							<Link
+								key={label}
+								href={href}
+								className={cn("nav-link-base", isActive ? "nav-link-active" : "text-black hover:opacity-70")}>
 								{label}
 							</Link>
 						);
